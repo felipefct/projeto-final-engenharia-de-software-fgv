@@ -43,7 +43,10 @@ def carregar_cidades(nome_arquivo):
     cidades = set()
     try:
         with open(nome_arquivo, mode='r', encoding='utf-8') as f:
-            reader = csv.reader(f)
+            linha = f.readline()
+            f.seek(0)
+            sep = ';' if ';' in linha else ','
+            reader = csv.reader(f, delimiter=sep)
             for row in reader:
                 if len(row) >= 2:
                     cidades.add(row[0].strip())

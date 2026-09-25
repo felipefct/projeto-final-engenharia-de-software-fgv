@@ -36,7 +36,10 @@ def carregar_grafo(nome_arquivo):
     grafo = Grafo()
     try:
         with open(nome_arquivo, mode='r', encoding='utf-8') as f:
-            reader = csv.reader(f)
+            linha = f.readline()
+            f.seek(0)
+            sep = ';' if ';' in linha else ','
+            reader = csv.reader(f, delimiter=sep)
             for row in reader:
                 if len(row) >= 3:
                     u, v, p = row[0].strip(), row[1].strip(), row[2].strip()
