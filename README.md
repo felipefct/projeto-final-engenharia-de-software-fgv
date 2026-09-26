@@ -1,4 +1,4 @@
-# Projeto Final - Engenharia de Software - Felipe de Carvalho - FGV
+# Projeto Final - Estrutura de dados - Felipe de Carvalho - FGV
 Sistema de cadastro de reserva escolar em Python, focado em estruturas de dados reais: Lista Encadeada para inclusões da secretaria, Árvore Binária de Busca (BST) para edições da diretoria, e Grafos com Dijkstra para o assistente calcular as menores distâncias entre as cidades.
 
 ## Estruturas de Dados Utilizadas
